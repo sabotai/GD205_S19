@@ -14,6 +14,7 @@ public class BoardMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //4 directional board movement
         if (Input.GetKeyDown(KeyCode.W))
         {
             playerPos += transform.forward;
@@ -31,16 +32,19 @@ public class BoardMovement : MonoBehaviour {
             playerPos -= transform.right;
         }
 
+        //check if the players x and z position is the same as the destination
         if (playerPos.x == destination.position.x && 
             playerPos.z == destination.position.z){
             playerPos += transform.up;
         }
-
+        //check if player x/z same as hazard
         if (playerPos.x == hazard.position.x &&
             playerPos.z == hazard.position.z)
         {
             playerPos -= transform.up;
         }
+
+        //update the position of the gameobject this is attached to
         transform.position = playerPos;
     }
 }
