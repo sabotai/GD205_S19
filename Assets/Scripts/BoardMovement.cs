@@ -59,6 +59,8 @@ public class BoardMovement : MonoBehaviour {
             newPos = playerPos - transform.right;
         }
 
+
+        //*****BLOCKS/WALLS*****
         //create a boolean that will keep track of whether our new position is already a block
         bool inABlock = false;
 
@@ -85,6 +87,7 @@ public class BoardMovement : MonoBehaviour {
         }
 
 
+        //*****HAZARDS*****
        //we use a loop to check each hazard in the array 
        for (int i = 0; i < hazards.Length; i++){
        		//if the players x and z position are the same as the current hazard we are checking...
@@ -98,6 +101,16 @@ public class BoardMovement : MonoBehaviour {
             }
         }
 
+
+        //*****GOAL*****
+        //check if the players x and z position is the same as the destination
+        if (playerPos.x == destination.position.x && 
+            playerPos.z == destination.position.z){
+            playerPos += transform.up;
+        }
+
+
+        //*****UPDATE PLAYER POSITION*****
         //update the transform position of the gameobject this is attached to reflect our playerPos
         transform.position = playerPos;
     }

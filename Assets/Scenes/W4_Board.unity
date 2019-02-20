@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2664,12 +2664,12 @@ TextMesh:
   m_GameObject: {fileID: 1643383112}
   m_Text: Hello World
   m_OffsetZ: 0
-  m_CharacterSize: 2.29
+  m_CharacterSize: 1.66
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 128
+  m_FontSize: 103
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -2717,13 +2717,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1643383112}
-  m_LocalRotation: {x: 0.15635176, y: -0, z: -0, w: 0.9877014}
-  m_LocalPosition: {x: -11.5, y: 1.6, z: 8.4}
-  m_LocalScale: {x: 0.14568025, y: 0.059430048, z: 0.23193048}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: -13.6, y: 3.4, z: 18.1}
+  m_LocalScale: {x: 0.30088, y: 0.27507967, z: 0.32668042}
   m_Children: []
   m_Father: {fileID: 1749085658}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.990002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &1659333336
 GameObject:
   m_ObjectHideFlags: 0
