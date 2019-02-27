@@ -16,6 +16,9 @@ public class BoardMovement : MonoBehaviour {
     //this will display messages for the player
     public TextMesh playerMessage;
 
+    AudioSource aud;
+    public AudioClip moveClip;
+
     // Use this for initialization
     void Start () {
     	//assign the playerPos to whatever he position is of this gameobjects transform position
@@ -29,6 +32,7 @@ public class BoardMovement : MonoBehaviour {
         //we just need to make sure we tag them correctly
         hazards = GameObject.FindGameObjectsWithTag("Hazard");
         blocks = GameObject.FindGameObjectsWithTag("Block");
+        aud = GetComponent<AudioSource>();
 
     }
 	
@@ -42,21 +46,25 @@ public class BoardMovement : MonoBehaviour {
         {
         	//if the player presses the w key, update the newpos to reflect the playerPos plus one unit forward
             newPos = playerPos + transform.forward;
+            aud.PlayOneShot(moveClip);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
         	//if the player presses the s key, update the newpos to reflect the playerPos plus one unit backward (written as -forward since unity doesnt have backward)
             newPos = playerPos - transform.forward;
+            aud.PlayOneShot(moveClip);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
         	//do the same for right
             newPos = playerPos + transform.right;
+            aud.PlayOneShot(moveClip);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
         	//and left
             newPos = playerPos - transform.right;
+            aud.PlayOneShot(moveClip);
         }
 
 
