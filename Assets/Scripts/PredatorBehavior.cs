@@ -7,6 +7,7 @@ public class PredatorBehavior : MonoBehaviour {
     Rigidbody predRB; //store our rigidbody info to manipulate it
     public Transform prey; //store our prey transform... public so we can assign it in the inspector
     public float forceAmt; //how much force in a given direction to seek the prey
+    public float distThresh = 3f;
 
 	// Use this for initialization
 	void Start () {
@@ -22,8 +23,13 @@ public class PredatorBehavior : MonoBehaviour {
 		//left and down would be (-1, -1, 0), meaning left, down, and neither fwd nor bwd
         Vector3 preyDirection = Vector3.Normalize(prey.position - transform.position);
 
-        //we use the add force function/method of rigidbody
-        //to add force in the direction of the prey and multiply by an amount of force
-        predRB.AddForce(preyDirection * forceAmt);
-	}
+
+        //check if the distance between these two points (the prey and the position of this gameObject) is less than a threshold...
+        if (Vector3.Distance(prey.position, transform.position) <= distThresh)
+        {
+            //we use the add force function/method of rigidbody
+            //to add force in the direction of the prey and multiply by an amount of force
+            predRB.AddForce(preyDirection * forceAmt);
+        }
+     }
 }
