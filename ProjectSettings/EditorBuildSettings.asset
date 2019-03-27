@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 1c3f80eaea06b42899998d8a0301e674
+  - enabled: 1
+    path: Assets/Scenes/W1_Face.unity
+    guid: a39ad9264ed5e4c9d8b6a78dc40ab2f2
+  - enabled: 1
     path: Assets/Scenes/W4_Board.unity
     guid: 6df872d1f23a143f3925b850b943a891
+  - enabled: 1
+    path: Assets/Scenes/W5_Physics.unity
+    guid: db44212391f18480887d0a4fadace336
+  - enabled: 1
+    path: Assets/Scenes/W6_MoPhysics.unity
+    guid: 683bb3c7f723c45228623a3629becaa6
+  - enabled: 1
+    path: Assets/Scenes/W7_Arena.unity
+    guid: 046a72205ad2b4103b8f4c9be8be831c
   m_configObjects: {}
